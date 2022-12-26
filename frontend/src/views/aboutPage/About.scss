@@ -1,0 +1,131 @@
+@import "../../styles/Variables.scss";
+@import "../../styles/Mixins.scss";
+//@import "~bootstrap/scss/bootstrap";
+
+.about-page {
+  width: 100%;
+  max-width: 1024px;
+  margin: auto;
+
+  .about-title {
+    padding: 1rem 0;
+    .title {
+      color: $title;
+      font-size: $large-font-size;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+    }
+
+    .subTitle {
+      color: $title;
+      font-size: $middle-font-size;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .ordering-procedures {
+    margin-bottom: 2rem;
+    .procedural-step{
+      width: 100%;
+      background-color: white;
+      padding: 1rem;
+      margin: 0;
+      border: 1px solid $title;
+      border-radius: 0.2rem 0.2rem 0 0;
+      position: relative;
+      cursor: pointer;
+
+      .seteps-icon {
+        @include stepsIcon;
+      }
+    }
+
+    .procedural-steps{
+      @include proceduralSteps;
+
+      .seteps-icon {
+        @include stepsIcon;
+      }
+    }
+
+    .procedural-step-last {
+      @include proceduralStepLast;
+
+      .seteps-icon {
+        @include stepsIcon;
+      }
+    }
+
+    .steps-bg {
+      width: 100%;
+      margin: 0;
+      padding: 1rem;
+      border: 1px solid $title;
+      border-radius: 0.2rem 0.2rem 0 0;
+      background-color:	#e6e6fa;
+      color: $title;
+      cursor: pointer;
+      position: relative;
+
+      .seteps-icon {
+        @include stepsIcon;
+      }
+    }
+
+    .each-step {
+      padding: 1rem;
+      margin: 0;
+      border: 1px solid $title;
+    }
+  }
+
+  .accordion-bootstrap {
+    margin-bottom: 1rem;
+  }
+
+  .handle-questions-span {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    background-color:#c6e6f6;
+    cursor: pointer;
+    position: relative;
+    transition: 1s;
+
+    .icon {
+        position: absolute;
+        top: 50%;
+        right: 1%;
+        transform: translate(-50%, -50%);
+        @include icon;
+    }
+  }
+
+  .sept-five-btn {
+    @include buttonNextToSentence;
+  }
+
+  .frequently-asked-questions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+
+    .question-answer {
+      padding: 0.3rem 0.5rem;
+      line-height: 1.6rem;
+
+      .question-answer-btn {
+        @include buttonNextToSentence;
+      }
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+}

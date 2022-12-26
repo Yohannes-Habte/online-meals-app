@@ -1,0 +1,50 @@
+@import "../../styles/Variables.scss";
+@import "../../styles/Mixins.scss";
+
+.navbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $navbar-bg;
+  padding: 0 1rem;
+  z-index: 2;
+
+  .navbar-logo {
+    cursor: pointer;
+  }
+
+  .navbar-ul {
+    display: flex;
+    
+    .navbar-list {
+      width: 5rem;
+      text-align: center;
+      font-weight: $normal-font-weight;
+
+      & a {
+        color: $title;
+        padding: 1rem;
+        &:hover {
+          @include hoverNavbar;
+        }
+      }
+    }
+  }
+
+  .navbar-login-and-register {
+    display: flex;
+
+    & a {
+      width: 5rem;
+      padding: 1rem;
+      color: $title;
+      text-align: center;
+      &:hover {
+        @include hoverNavbar;
+      }
+    }
+  }
+}

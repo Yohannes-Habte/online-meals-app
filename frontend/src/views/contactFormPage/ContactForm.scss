@@ -1,0 +1,75 @@
+@import "../../styles/Variables.scss";
+@import "../../styles/Mixins.scss";
+
+.contact-form-page {
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+  
+    .contact-form-page-container {
+      display: grid;
+      grid-template-columns: 65% 35%;
+      column-gap: 1rem;
+      grid-template-areas:
+        "title title"
+        "article1 article2";
+  
+      .contact-form-title {
+        grid-area: title;
+        margin-top: 4rem;
+      }
+      .article-of-form {
+        grid-area: article1;
+        padding: 1rem 1.5rem;
+        margin-top: 2rem;
+        border: 1px solid green;
+  
+        .contact-form {
+          .user-data {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 1rem;
+  
+            .input {
+              padding: 1rem 0;
+  
+              & input {
+                @include input;
+              }
+            }
+          }
+  
+          .text-message {
+            & textarea {
+              padding: 1rem;
+              font-size: 1.1rem;
+            }
+          }
+        }
+      }
+  
+      .fast-contact-tools {
+        grid-area: article2;
+        margin-top: 2rem;
+        border: 1px solid green;
+        padding: 1rem;
+  
+        .contact-tools {
+          display: flex;
+          gap: 1rem;
+          padding: 1rem 0;
+  
+          .contact-form-icon {
+            @include icon;
+            font-size: 3rem;
+            margin-right: 1rem;
+          }
+  
+          & p {
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,89 @@
+@import "../../styles/Variables.scss";
+@import "../../styles/Mixins.scss";
+
+.register-page {
+  width: 100%;
+  max-width: 1024px;
+  margin: auto;
+
+  .register-title {
+    @include title;
+  }
+
+  .register-fieldset {
+    width: $desktop;
+    margin: auto;
+
+    .register-heading {
+      width: 90%;
+      margin: auto;
+      text-align: center;
+      padding: 0.5rem 0;
+      border-radius: 0.2rem 0.2rem 0 0;
+      background-color: $heading-bg;
+    }
+
+    .register-form {
+      width: 90%;
+      margin: auto;
+      border: 1px solid $title;
+      border-radius: 0 0 0.2rem 0.2rem;
+
+      .name-email-password {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1rem;
+        padding: 0 1rem;
+
+        .first-name-container {
+          @include inputLabel;
+        }
+
+        .last-name-container {
+          @include inputLabel;
+        }
+
+        .email-container {
+          @include inputLabel;
+        }
+
+        .password-container {
+          @include inputLabel;
+        }
+      }
+
+      .physical-address-container {
+        @include inputLabel;
+        padding: 0 1rem;
+      }
+
+      .checkbox-container {
+        display: flex;
+        gap: 0.5rem;
+        padding: 1rem;
+
+        & label a {
+            color: blue;
+        }
+      }
+
+      .register-btn-container {
+        padding: 1rem;
+
+        .register-btn {
+          @include button;
+        }
+      }
+
+      .already-have-account-container {
+        display: flex;
+        gap: 0.5rem;
+        padding: 1rem;
+  
+        & a {
+          color: blue;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import "../../styles/Variables.scss";
+@import "../../styles/Mixins.scss";
+
+.header {
+  position: relative;
+
+  .header-title {
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    color: $title;
+    font-size: $large-font-size;
+  }
+
+  .header-image img {
+    width: 100%;
+    height: 91.5vh;
+    object-fit: cover;
+  }
+
+  .header-btn {
+    position: absolute;
+    top: 30%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    @include button;
+  }
+}
