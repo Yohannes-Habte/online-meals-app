@@ -54,11 +54,12 @@ const About = () => {
         >
           Step One
           {stepOne ? (
-            <MdOutlineKeyboardArrowDown className="seteps-icon" />
+            <MdOutlineKeyboardArrowDown className="step-icon" />
           ) : (
-            <MdOutlineKeyboardArrowUp className="seteps-icon" />
+            <MdOutlineKeyboardArrowUp className="step-icon" />
           )}
         </h4>
+
         <article className={stepOne ? "hide" : "each-step"}>
           <h3>Customers on any food portal</h3>
           <p>
@@ -75,9 +76,9 @@ const About = () => {
         >
           Step Two
           {stepTwo ? (
-            <MdOutlineKeyboardArrowDown className="seteps-icon" />
+            <MdOutlineKeyboardArrowDown className="step-icon" />
           ) : (
-            <MdOutlineKeyboardArrowUp className="seteps-icon" />
+            <MdOutlineKeyboardArrowUp className="step-icon" />
           )}
         </h4>
 
@@ -97,9 +98,9 @@ const About = () => {
         >
           Step Three
           {stepThree ? (
-            <MdOutlineKeyboardArrowDown className="seteps-icon" />
+            <MdOutlineKeyboardArrowDown className="step-icon" />
           ) : (
-            <MdOutlineKeyboardArrowUp className="seteps-icon" />
+            <MdOutlineKeyboardArrowUp className="step-icon" />
           )}
         </h4>
 
@@ -118,9 +119,9 @@ const About = () => {
         >
           Step Four
           {stepFour ? (
-            <MdOutlineKeyboardArrowDown className="seteps-icon" />
+            <MdOutlineKeyboardArrowDown className="step-icon" />
           ) : (
-            <MdOutlineKeyboardArrowUp className="seteps-icon" />
+            <MdOutlineKeyboardArrowUp className="step-icon" />
           )}
         </h4>
 
@@ -133,14 +134,14 @@ const About = () => {
         </article>
 
         <h4
-          className={stepFive ? "procedural-step-last" : "steps-bg"}
+          className={stepFive ? "last-procedural-step" : "steps-bg"}
           onClick={handleStepFive}
         >
           Step Five
-          {stepFour ? (
-            <MdOutlineKeyboardArrowDown className="seteps-icon" />
+          {stepFive ? (
+            <MdOutlineKeyboardArrowDown className="step-icon" />
           ) : (
-            <MdOutlineKeyboardArrowUp className="seteps-icon" />
+            <MdOutlineKeyboardArrowUp className="step-icon" />
           )}
         </h4>
 

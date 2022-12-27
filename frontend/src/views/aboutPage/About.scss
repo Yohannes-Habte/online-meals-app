@@ -39,7 +39,7 @@
       position: relative;
       cursor: pointer;
 
-      .seteps-icon {
+      .step-icon {
         @include stepsIcon;
       }
     }
@@ -47,15 +47,15 @@
     .procedural-steps{
       @include proceduralSteps;
 
-      .seteps-icon {
+      .step-icon {
         @include stepsIcon;
       }
     }
 
-    .procedural-step-last {
-      @include proceduralStepLast;
+    .last-procedural-step {
+      @include lastProceduralStep;
 
-      .seteps-icon {
+      .step-icon {
         @include stepsIcon;
       }
     }
@@ -71,7 +71,7 @@
       cursor: pointer;
       position: relative;
 
-      .seteps-icon {
+      .step-icon {
         @include stepsIcon;
       }
     }
@@ -90,6 +90,7 @@
   .handle-questions-span {
     width: 100%;
     padding: 1rem;
+    margin-bottom: 1rem;
     border-radius: 0.2rem;
     background-color:#c6e6f6;
     cursor: pointer;

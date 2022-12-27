@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { MdOutlineMail, MdPhoneInTalk, MdOutlineMessage } from "react-icons/md";
+import { FaLinkedin,  FaYoutube,  FaFacebookSquare } from "react-icons/fa";
 
 //=======================================================
 // About Page Data
@@ -94,3 +96,36 @@ export const ContactHeaderDropDown = [
     className: "dropdown-link",
   },
 ];
+
+//=======================================================
+// Footer Component Data
+//=======================================================
+export const FooterData = [
+  {
+    title: "Sitemap",
+    item1: <NavLink to="/about"> About </NavLink>,
+    item2: <NavLink to="/meals"> Meals </NavLink>,
+    item3: <NavLink to="/services"> Services </NavLink>
+  },
+
+  {
+    title: "Company",
+    item1: <NavLink to="/team"> Our Team </NavLink>,
+    item2: <NavLink to="/projects"> Projects </NavLink>,
+    item3: <NavLink to="/clients"> Clients </NavLink>,
+  },
+
+  {
+    title: "Social",
+    item1: <a href="https://www.linkedin.com/in/yohannes-habtemariam"> <FaLinkedin className="footer-icon"/> LinkedIn </a>,
+    item2: <a href="https://www.facebook.com/profile.php?id=100009710022882"> <FaFacebookSquare className="footer-icon"/> Facebook </a>,
+    item3: <a href="https://www.youtube.com/@lisaConsult"> <FaYoutube className="footer-icon"/> YouTube </a>
+  },
+
+  {
+    title: "Contact",
+    item1: <a href="mailto:uelandrae@gmail.com"> <MdOutlineMail className="footer-icon"/> Email Us </a>,
+    item2: <a href="tel:+4917681005650"> <MdPhoneInTalk className="footer-icon"/> Call Us</a>,
+    item3: <NavLink to="/contact"> <MdOutlineMessage className="footer-icon" /> Message Us </NavLink> 
+  },
+]

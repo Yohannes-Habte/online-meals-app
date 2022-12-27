@@ -1,61 +1,35 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { FooterData } from "../../data/Data";
 import "./Footer.scss";
-import logo from "../../assets/mixed.jpg";
-import { FaGithubSquare, FaLinkedin, FaYoutube, FaFacebookSquare, FaTwitterSquare } from "react-icons/fa";
-import { MdOutlineMail, MdPhoneInTalk, MdOutlineMessage, MdLocationOn } from "react-icons/md";
+import logo from "../../assets/logo.png";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-sections-container">
-        <section className="footer-sitemap">
-          <h2> Sitemap </h2>
-          <ul>
-            <li> <NavLink to="/"> About </NavLink> </li>
-            <li> <NavLink to="/meals"> Service </NavLink> </li>
-            <li> <NavLink to="/cart"> Research </NavLink> </li>
-            <li> <NavLink to="/service"> Registration </NavLink> </li>
-            <li> <NavLink to="/contact"> Careers </NavLink> </li>
-          </ul>
-        </section>
-
-        <section className="footer-company">
-          <h2> Company </h2>
-          <ul>
-            <li> <NavLink to="/story"> Our Story </NavLink> </li>
-            <li> <NavLink to="/team"> Our Team </NavLink> </li>
-            <li> <NavLink to="/projects"> Projects </NavLink> </li>
-            <li> <NavLink to="/awards"> Award </NavLink> </li>
-            <li> <NavLink to="/clients"> Clients </NavLink> </li>
-          </ul>
-        </section>
-
-        <section className="footer-social">
-          <h2> Social </h2>
-          <ul>
-            <li> <a href="https://www.linkedin.com/in/yohannes-habtemariam/" target="_blank"> <FaLinkedin className="footer-icon"/> LinkedIn </a> </li>
-            <li> <a href="https://www.facebook.com/profile.php?id=100009710022882" target="_blank"> <FaFacebookSquare className="footer-icon"/> Facebook </a> </li>
-            <li> <a href="https://www.youtube.com/" target="_blank"> <FaYoutube className="footer-icon"/> YouTube </a> </li>
-            <li> <a href="https://github.com/Yohannes-Habtemariam" target="_blank"> <FaGithubSquare className="footer-icon"/> Github </a> </li>
-            <li> <a href="https://twitter.com/" target="_blank"> <FaTwitterSquare className="footer-icon"/> Twitter </a> </li>
-          </ul>
-        </section>
-
-        <section className="footer-contact">
-          <h2> Contact </h2>
-          <ul>
-            <li> <a href="mailto:uelandrae@gmail.com"> <MdOutlineMail className="footer-icon"/> Email </a> </li>
-            <li> <a href="tel:+4917681005650"> <MdPhoneInTalk className="footer-icon"/> Call</a> </li>
-            <li> <a href="tel:+4917681005650"> <MdLocationOn className="footer-icon"/> Location</a> </li>
-            <li> <NavLink to="/contact"> <MdOutlineMessage className="footer-icon" /> Comments</NavLink> </li>
-          </ul>
-        </section>
+        {FooterData.map(({ title, item1, item2, item3 }, index) => { 
+          return (
+            <section key={index} className="footer-section">
+              <h2 className="footer-title"> {title} </h2>
+              <ul className="footer-list-items">
+                <li className="list-item"> {item1} </li>
+                <li className="list-item"> {item2} </li>
+                <li className="list-item"> {item3} </li>
+              </ul>
+            </section>
+          );
+        })}
       </div>
+
       <div className="footer-copyright">
-        <p className="compyright"> &copy; 2022 LisaConsult. All rights reserved! </p>
+        <p className="compyright">
+          &copy; 2022 Lisa Organic Meals. All rights reserved!
+        </p>
         <figure className="footer-logo">
-          <NavLink to="/" > <img src={logo} alt="Logo of LisaConsult" /> </NavLink>
+          <NavLink to="/">
+            <img src={logo} alt="Logo of Organic Lisa Meals" />
+          </NavLink>
         </figure>
       </div>
     </footer>
