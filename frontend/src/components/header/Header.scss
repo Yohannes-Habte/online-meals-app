@@ -15,7 +15,7 @@
 
   .header-image img {
     width: 100%;
-    height: 91.5vh;
+    height: 100vh;
     object-fit: cover;
   }
 
@@ -25,5 +25,16 @@
     left: 60%;
     transform: translate(-50%, -50%);
     @include button;
+  }
+
+  .header-logo img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 90%;
+    right: 1%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
   }
 }

@@ -11,17 +11,17 @@ const DropDownItem = () => {
 
   // Function that handles the click on each category;
   const onClick = () => {
-    setClick(false)
+    setClick(false);
   }
 
   return (
     <section className="drop-down-container">
       <ul onClick={handleClick} className={click ? "banner-dropdown clicked" : "banner-dropdown"} >
-        {ContactHeaderDropDown.map((item, index) => {
+        {ContactHeaderDropDown.map(({ title, path, className }, index) => {
           return (
-            <li key={index} className="list-item" >
-              <NavLink to={item.path} onClick={onClick} className={item.className}>
-                {item.title}
+            <li key={ index } className="list-item" >
+              <NavLink to={ path } className={ className }>
+                { title }
               </NavLink>
             </li>
           );

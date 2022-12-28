@@ -35,9 +35,9 @@ const App = () => {
           <Route path='/meals' element={ <Meal /> } />
           <Route path='/cart' element={ <Cart /> } />
           <Route path='/contact' element={ <Contact /> } />
-          <Route path='/service' element={ <ContactForm /> } />
-          <Route path='/food' element={ <ContactForm /> } />
-          <Route path='/other' element={ <ContactForm /> } />
+          <Route path='/contact/service' element={ <ContactForm /> } />
+          <Route path='/contact/food' element={ <ContactForm /> } />
+          <Route path='/contact/other' element={ <ContactForm /> } />
           <Route path='/login' element={ <Login /> } />
           <Route path='/register' element={ <Register /> } />
         </Routes>
