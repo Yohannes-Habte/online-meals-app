@@ -43,8 +43,13 @@ const About = () => {
   return (
     <main className="about-page">
       <div className="about-title">
-        <h1 className="title">The Process of</h1>
-        <h3 className="subTitle">Online Food Ordering and Delivery </h3>
+        <h1 className="title">Mission</h1>
+        <p className="mission-statement">
+          The mission of Lisa Meals is to provide customers with healthy and
+          affordable organic food to improve and promote public health, which is
+          a state's best asset.
+        </p>
+        <h3 className="subTitle"> The Process of Online Food Ordering and Delivery </h3>
       </div>
 
       <section className="ordering-procedures">
@@ -150,7 +155,10 @@ const About = () => {
           <p>
             Eventually, the customer receives the food delivery and enjoys it
             safely and intact. For more information, please contact us via{" "}
-            <NavLink to="/contact"><button className="sept-five-btn">Contact Us</button></NavLink>.
+            <NavLink to="/contact">
+              <button className="sept-five-btn">Contact Us</button>
+            </NavLink>
+            .
           </p>
         </article>
       </section>

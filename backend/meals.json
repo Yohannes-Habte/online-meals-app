@@ -1,0 +1,110 @@
+[
+  {
+    "image": "fish1.jpg",
+    "title": "Tuna",
+    "description": "Tuna, whether fresh or canned, is a great source of protein – in fact, tuna contains all of the essential amino acids needed by the body for growth and maintenance.",
+    "price": 16
+  },
+  {
+    "image": "fish2.jpg",
+    "title": "Salmon",
+    "description": "Salmon is versatile and one of the best sources of omega-3 fatty acid, which is essential as the body cannot make it on its own so it must be obtained through food. Salmon's also high in protein, with just 200g providing around 44g protein.",
+    "price": 15
+  },
+  {
+    "image": "fish3.jpg",
+    "title": "Mackerel",
+    "description": "Mackerel is rich in healthy fats, protein and selenium, which is important for a healthy immune system and thyroid function. ",
+    "price": 14
+  },
+  {
+    "image": "fish4.jpg",
+    "title": "TILAPIA",
+    "description": "Tilapia is high in vitamin B12, which helps your body make DNA, maintain its nervous system, and produce red blood cells. It's also low in fat, saturated fat, omega-3 fatty acids, calories, carbohydrates, and sodium making it a healthy addition to any meal.",
+    "price": 15
+  },
+  {
+    "image": "fish5.jpg",
+    "title": "Herring",
+    "description": "Herring is a Nordic Diet staple and for good reason—it has a higher omega-3 content than sardines, trout and mackerel. It's also an excellent source of vitamin D and selenium. You'll typically find herring that has been canned, cured or smoked on restaurant menus, but it can also be eaten fresh.",
+    "price": 12
+  },
+  {
+    "image": "meat1.jpg",
+    "title": "Lamb Meat.",
+    "description": "Not only is it a rich source of high-quality protein, but it is also an outstanding source of many vitamins and minerals, including iron, zinc, and vitamin B12. Because of this, regular consumption of lamb may promote muscle growth, maintenance, and performance. In addition, it helps prevent anemia.",
+    "price": 12
+  },
+  {
+    "image": "meat2.jpg",
+    "title": "Goat Meat.",
+    "description": "Goat meat is low in saturated fats and has more of the recommended unsaturated fats. Goat meat also has lower levels of cholesterol compared to other meats. Low cholesterol and low saturated fat in the diet may help to decrease the risk of developing heart disease. Goat is a good source of high quality lean protein.",
+    "price": 10
+  },
+  {
+    "image": "meat3.jpg",
+    "title": "Rabbit Meat",
+    "description": "Rabbit meats are excellent sources of protein. Protein also keeps us healthy by building and repairing our muscles, skin and blood. Such meat is excellent sources of iron and B12 and.",
+    "price": 15
+  },
+  {
+    "image": "meat4.jpg",
+    "title": "Beef",
+    "description": "Beef is naturally rich in protein*, which helps muscle growth and supports muscle mass. Beef provides iron and four essential vitamins - niacin, riboflavin, vitamins B6 and B12 - which help reduce tiredness and fatigue.",
+    "price": 10
+  },
+  {
+    "image": "vegan1.jpg",
+    "title": "The Vegetarian Diet",
+    "description": "Compared with meat eaters, vegetarians tend to consume less saturated fat and cholesterol and more vitamins C and E, dietary fiber, folic acid, potassium, magnesium, and phytochemicals (plant chemicals), such as carotenoids and flavonoids.",
+    "price": 12
+  },
+  {
+    "image": "vegan2.jpg",
+    "title": "SUMMER FRUIT SALAD",
+    "description": "Fresh Fruit Salad is a must for summer! Colorful, fresh, and sweet. Toss together your favorite fruits with an easy lime dressing.",
+    "price": 10
+  },
+  {
+    "image": "vegan3.jpg",
+    "title": "Vegan mixed grain salad",
+    "description": "Serve this delicious salad as a hearty side or make it the main attraction. It's filled with healthy grains and seeds with a sweet, spicy pomegranate dressing.",
+    "price": 4
+  },
+  {
+    "image": "vegan4.jpg",
+    "title": "VEGAN RICE SALAD",
+    "description": "Based on the ingredients that you use, some rice-based salads can not only fill you up quickly but also keep you satiated for long. They are a boon for busy professionals as they elevate energy levels and prevents one from indulging in unhealthy snacks.",
+    "price": 10
+  },
+  {
+    "image": "vegan5.jpg",
+    "title": "CREAMY VEGAN AVOCADO SALAD",
+    "description": "It's rich in oleic acid (a monounsaturated fat), polyunsaturated fats, carotenoids, and other antioxidant-rich nutrients that are linked to improved heart, skin, and eye health. You can easily add it to your diet in a salad, as part of a dip or marinade, or as a replacement for most other plant oils.",
+    "price": 10
+  },
+  {
+    "image": "vegan6.jpg",
+    "title": "VEGETARIAN COBB SALAD",
+    "description": "This Vegetarian Cobb Salad is a delicious way to eat more veggies. It’s loaded with filling protein and tossed with a flavorful red wine vinaigrette, and makes an easy packed lunch for the week!",
+    "price": 6
+  },
+  {
+    "image": "vegan7.jpg",
+    "title": "Raw Vegan Avocado Burger",
+    "description": "One of the key steps is marinating the carrots, which go inside the “burger.” Allow at least 30 extra minutes to marinate to let the carrots absorb those flavors.",
+    "price": 5
+  },
+  {
+    "image": "vegan8.jpg",
+    "title": "Vegan risotto",
+    "description": "Fennel, courgette, peas and parsley make for a wonderfully green risotto, flavoured with a little nutritional yeast in place of parmesan.",
+    "price": 11
+  },
+  {
+    "image": "vegan9.jpg",
+    "title": "SPICY CHICKPEA VEGGIE BURGERS",
+    "description": "Many veggie burgers are made from vegetables, whole grains, and legumes (like beans or lentils). These are good-for-you ingredients that provide fiber and a variety of vitamins and minerals. Packaged veggie burgers (like Morning Star Farms or Boca) can also be a part of a healthy eating plan.",
+    "price": 7
+  }
+]

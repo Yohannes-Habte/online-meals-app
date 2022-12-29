@@ -10,12 +10,12 @@
   .about-title {
     padding: 1rem 0;
     .title {
-      color: $title;
-      font-size: $large-font-size;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-transform: uppercase;
+      @include title;
+    }
+
+    .mission-statement {
+      font-size: $normal-font-size;
+      margin-bottom: 1rem;
     }
 
     .subTitle {

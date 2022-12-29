@@ -45,13 +45,13 @@ const ContactForm = () => {
               </div>
 
               <div className="input">
-                <input type="file" name="attach" />
+                <input type="file" name="file" />
               </div>
             </div>
 
             <div className="text-message">
               <textarea
-                name="text"
+                name="message"
                 id="text"
                 cols="56"
                 rows="6"

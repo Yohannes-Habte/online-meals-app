@@ -10,6 +10,7 @@ import loginRoute from "./routes/loginRoute.js";
 import usersRoute from "./routes/usersRoute.js";
 import mealsRoute from "./routes/mealsRoute.js";
 import orderRoute from "./routes/orderRoute.js";
+import commentsRoute from "./routes/commentsRoute.js";
 import globalErrorHandler from "./middleware/globalErrorHandler.js"
 
 // The application
@@ -42,7 +43,8 @@ app.use("/register", registerRoute);
 app.use("/login", loginRoute);
 app.use("/users", usersRoute);
 app.use("/meals", mealsRoute);
-app.use("/oders", orderRoute)
+app.use("/oders", orderRoute);
+app.use("/comments", commentsRoute);
 
 // showing what change has been done
 app.use(morgan("tiny"));
