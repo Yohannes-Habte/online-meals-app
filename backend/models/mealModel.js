@@ -5,7 +5,7 @@ const { Schema } = mongoose;
 const mealSchema = new Schema({
     image: { type: String, required: true },
     title: { type: String, required: true },
-    price: { type: Number, required: true },
+    price: { type: Number, required: true, min: 5 },
     description: { type: String, required: true}
 }, { timestamps: true });
 

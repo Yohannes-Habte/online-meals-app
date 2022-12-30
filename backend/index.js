@@ -38,6 +38,9 @@ mongoose
   .catch((error) => console.log(error));
 */
 
+// showing what change has been done
+app.use(morgan("tiny"));
+
 // Endpoints
 app.use("/register", registerRoute);
 app.use("/login", loginRoute);
@@ -46,8 +49,8 @@ app.use("/meals", mealsRoute);
 app.use("/oders", orderRoute);
 app.use("/comments", commentsRoute);
 
-// showing what change has been done
-app.use(morgan("tiny"));
+// Express static used to access the the images in the assets folder
+app.use(express.static("assets"));
 
 // Express middleware - Error handler
 app.use(globalErrorHandler);

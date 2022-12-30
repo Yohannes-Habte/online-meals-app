@@ -3,8 +3,8 @@ import mongoose from "mongoose";
 const { Schema } = mongoose;
 
 const orderSchema = new Schema({
-    name: { type: String, required: true },
-    title: { type: String, required: true },
+    meals: [{type: mongoose.Types.ObjectId, ref: "Meal"}],
+    deliveryAddress: {},
     totalPrice: { type: Number, required: true }
 }, { timestamps: true });
 
