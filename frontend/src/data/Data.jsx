@@ -80,19 +80,19 @@ export const AboutData = [
 export const ContactHeaderDropDown = [
   {
     title: "Service Delivery Questions",
-    path: "service",
+    path: "testimonials",
     className: "dropdown-link",
   },
 
   {
     title: "Food Related Questions",
-    path: "food",
+    path: "foods",
     className: "dropdown-link",
   },
 
   {
     title: "Other Questions",
-    path: "other",
+    path: "others",
     className: "dropdown-link",
   },
 ];

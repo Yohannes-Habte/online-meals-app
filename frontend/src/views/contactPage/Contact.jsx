@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
 import contactUs from "../../assets/contactUs.jpg";
 import mixed from "../../assets/mixed.jpg";
 import meatMeal from "../../assets/meatMeal.jpg";
@@ -48,7 +47,7 @@ const Contact = () => {
         </select>
       </form> 
       */}
-      
+
         <ul
           className="contact-category"
           onMouseEnter={onMouseEnter}

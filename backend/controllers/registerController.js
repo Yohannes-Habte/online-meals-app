@@ -2,7 +2,20 @@ import User from "../models/userModel.js";
 import createError from "http-errors";
 
 export const registerPost = async (req, res, next) => {
-  const { firstName, lastName, email, password, address } = req.body;
+  const {
+    firstName,
+    lastName,
+    gender,
+    telephone,
+    email,
+    password,
+    streetName,
+    houseNumber,
+    zipCode,
+    cityName,
+    stateName,
+    countryName,
+  } = req.body;
 
   try {
     const user = await User.findOne({ email: email });
@@ -11,9 +24,16 @@ export const registerPost = async (req, res, next) => {
       const newUser = User({
         firstName: firstName,
         lastName: lastName,
+        gender: gender,
+        telephone: telephone,
         email: email,
         password: password,
-        address: address,
+        streetName: streetName,
+        houseNumber: houseNumber,
+        zipCode: zipCode,
+        cityName: cityName,
+        stateName: stateName,
+        countryName: countryName,
       });
 
       try {
@@ -23,7 +43,7 @@ export const registerPost = async (req, res, next) => {
         return next(createError(404, "User could not be saved in the database! Please try again!"));
       }
 
-      return res.status(201).json(newUser);
+      return res.status(201).json({user: newUser});
     }
   } catch (err) {
     console.log(err);

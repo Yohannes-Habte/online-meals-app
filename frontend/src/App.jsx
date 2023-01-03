@@ -33,7 +33,7 @@ const App = () => {
     const fetchMealsData = async () => {
       const response = await fetch(process.env.REACT_APP_SERVER_URL + "/meals");
       const result = await response.json();
-      
+
       try {
         if (response.ok) {
           setMeals(result);
@@ -47,9 +47,55 @@ const App = () => {
     fetchMealsData();
   }, []);
 
+  // =======================================================================
+  // Function to add order to the cart 
+  // ========================================================================
+  const addToCart = (clickedMeal) => {
+    const findMeal = meals.find((meal) => meal._id === clickedMeal._id);
+    
+    if (findMeal) {
+      setCart([...cart, {...findMeal, quantity: findMeal.quantity + 1}]);
+    } else {
+      setCart([...cart, {...clickedMeal, quantity: 1}]);
+    }
+  };
+
+  // =======================================================================
+  // Function to remove from cart 
+  // ========================================================================
+  const removeFromCart = (clickedMeal) => {
+    const findMeal = meals.find((meal) => meal._id === clickedMeal._id);
+   if(findMeal) {
+    setCart([...cart, findMeal.quantity - 1])
+   }
+  };
+
+  // =======================================================================
+  // Function to Change Quantity
+  //========================================================================
+  const changeQuantity = (event, meal) => {
+    const foundItem = cart.find((item) => item._id === meal._id);
+    foundItem.quantity =  Number(event.target.value);
+    setCart([...cart]);
+  };
+
   return (
     <myContext.Provider
-      value={{ user, setUser, meals, setMeals, click, setClick, handleClick }}
+      value={{
+        user,
+        setUser,
+        meals,
+        setMeals,
+        cart, 
+        setCart,
+        orders, setOrders,
+        click,
+        setClick,
+        handleClick,
+        addToCart,
+        removeFromCart,
+        changeQuantity,
+      }}
     >
       <div>
         <Router>
@@ -60,9 +106,9 @@ const App = () => {
             <Route path="/meals" element={<Meal />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/contact/service" element={<ContactForm />} />
-            <Route path="/contact/food" element={<ContactForm />} />
-            <Route path="/contact/other" element={<ContactForm />} />
+            <Route path="/contact/testimonials" element={<ContactForm />} />
+            <Route path="/contact/foods" element={<ContactForm />} />
+            <Route path="/contact/others" element={<ContactForm />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
           </Routes>

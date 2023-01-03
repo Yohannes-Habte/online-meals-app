@@ -46,8 +46,8 @@ const About = () => {
         <h1 className="title">Mission</h1>
         <p className="mission-statement">
           The mission of Lisa Meals is to provide customers with healthy and
-          affordable organic food to improve and promote public health, which is
-          a state's best asset.
+          affordable organic food to improve and promote public health. Every Weekend we update our menu! Don't forget to visit our Meals Page
+          to discover new dishes from all around the world.
         </p>
         <h3 className="subTitle"> The Process of Online Food Ordering and Delivery </h3>
       </div>

@@ -3,14 +3,24 @@ import cors from "cors";
 import morgan from "morgan";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import multer from "multer";// To receive and download images
 
-// The routes
+// Where to store the image
+const storage = multer.diskStorage({
+  destination: "uploads/images/",
+  filename: function(req, file, cb) {
+    cb(null, new Date().getTime() + file.originalname)
+  }
+});
+const upload = multer({storage});
+
+// The routes router 
 import registerRoute from "./routes/registerRoute.js";
 import loginRoute from "./routes/loginRoute.js";
 import usersRoute from "./routes/usersRoute.js";
 import mealsRoute from "./routes/mealsRoute.js";
 import orderRoute from "./routes/orderRoute.js";
-import commentsRoute from "./routes/commentsRoute.js";
+import testimonialRoute from "./routes/testimonialRoute.js";
 import globalErrorHandler from "./middleware/globalErrorHandler.js"
 
 // The application
@@ -47,10 +57,11 @@ app.use("/login", loginRoute);
 app.use("/users", usersRoute);
 app.use("/meals", mealsRoute);
 app.use("/oders", orderRoute);
-app.use("/comments", commentsRoute);
+app.use("/contact/testimonials", upload.single("image"), testimonialRoute);
 
 // Express static used to access the the images in the assets folder
 app.use(express.static("assets"));
+app.use(express.static("uploads"));
 
 // Express middleware - Error handler
 app.use(globalErrorHandler);

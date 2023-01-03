@@ -2,15 +2,15 @@ import mongoose from "mongoose";
 
 const { Schema } = mongoose;
 
-const commentSchema = new Schema({
-    firstName: { type: String },
+const testimonialSchema = new Schema({
+    firstName: { type: String},
     lastName: { type: String },
-    email: { type: String, required: true, unique: true },
-    file: { type: String, required: true },
+    email: { type: String, required: true },
+    image: { type: String, required: true },
     message: { type: String, required: true },
 }, {timestamps: true});
 
-commentSchema.pre("save", function(next) {
+testimonialSchema.pre("save", function(next) {
     if(!this.firstName){
         this.firstName = "John"
     }
@@ -22,5 +22,5 @@ commentSchema.pre("save", function(next) {
     next();
 });
 
-const Comment = mongoose.model("Comment", commentSchema);
-export default Comment;
+const Testimonial = mongoose.model("Testimonial", testimonialSchema);
+export default Testimonial;
