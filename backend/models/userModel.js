@@ -15,7 +15,8 @@ const userSchema = new Schema({
     zipCode: { type: Number, required: true },
     cityName: { type: String, required: true },
     stateName: { type: String, required: true },
-    countryName: { type: String, required: true }
+    countryName: { type: String, required: true },
+    orders: [{ type: mongoose.Types.ObjectId, ref: "Order" }]
 }, { timestamps: true });
 
 userSchema.pre("save", async function(next) {

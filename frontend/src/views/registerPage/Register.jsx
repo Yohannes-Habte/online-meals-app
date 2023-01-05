@@ -7,7 +7,7 @@ import "./Register.scss";
 
 const Register = () => {
   // State variables
-  const { setUser } = useContext(myContext);
+  const { setUser, token } = useContext(myContext);
   const [userData, setUserData] = useState({
     firstName: "",
     lastName: "",
@@ -43,10 +43,10 @@ const Register = () => {
 
   // Function that handle input data change
   const updateData = (event) => {
-    setUserData({...userData, [event.target.name]: event.target.value})
+    setUserData({ ...userData, [event.target.name]: event.target.value });
   };
 
-  // Function to register a user 
+  // Function to register a user
   const registerUser = async (event) => {
     event.preventDefault();
 
@@ -54,24 +54,41 @@ const Register = () => {
       method: "POST",
       body: JSON.stringify(userData),
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + token,
       },
     };
 
-    const response = await fetch(process.env.REACT_APP_SERVER_URL + "/register", settings);
+    const response = await fetch(
+      process.env.REACT_APP_SERVER_URL + "/register",
+      settings
+    );
     const result = await response.json();
 
-    try{
-      if(response.ok) {
-        setUser(result.user);
+    try {
+      if (response.ok) {
+        // Set token expiry
+        const now = new Date();
+        const tokenExpiry = new Date(now.getTime() + 1000 * 60 * 60);
+        // Local storage with key call "data" and value "token, id and expiry"
+        localStorage.setItem(
+          "data",
+          JSON.stringify({
+            token: result.token,
+            id: result.id,
+            expiry: tokenExpiry.toISOString(),
+          })
+        );
+        // If the response is ok, dend data to backend
+        setUser(result.token, result.user);
         event.target.reset();
       } else {
-        throw new Error(result.message)
+        throw new Error(result.message);
       }
-    }catch(err){
-      console.log(err)
+    } catch (err) {
+      console.log(err);
     }
-  }
+  };
 
   return (
     <main className="register-page">

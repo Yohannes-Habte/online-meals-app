@@ -1,10 +1,33 @@
 import React from "react";
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { myContext } from "../../App";
 import "./Meal.scss";
 
 const Meal = () => {
-  const { meals, addToCart, removeFromCart } = useContext(myContext);
+  // Navigate to login if the user is not logged in
+  const navigate = useNavigate();
+  const { meals, cart, setCart, loggedIn } = useContext(myContext);
+
+  const addToCart = (clickedMeal) => {
+    let foundMeal = cart.find((elem) => elem._id === clickedMeal._id);
+
+    if (!loggedIn) {
+      alert("Please login");
+      navigate("/login");
+    } else {
+      if (foundMeal) {
+        foundMeal.quantity += 1;
+        setCart([...cart]);
+      } else {
+        if (cart.length + 1 > 3) {
+          alert("Reached Maximum Quantity of Meals");
+          return;
+        }
+        setCart([...cart, { ...clickedMeal, quantity: 1 }]);
+      }
+    }
+  };
 
   return (
     <main className="meals-page">
@@ -21,7 +44,9 @@ const Meal = () => {
                 <p className="meal-prices"> ${meal.price} </p>
               </div>
               <p className="meal-description"> {meal.description} </p>
-              <button onClick={() => addToCart(meal)} className="meal-btn">Add to Cart</button>
+              <button onClick={() => addToCart(meal)} className="meal-btn">
+                Add to Cart
+              </button>
             </article>
           );
         })}

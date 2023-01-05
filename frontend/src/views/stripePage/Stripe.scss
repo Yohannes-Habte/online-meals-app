@@ -1,1 +1,23 @@
-@import "../styles/Variables.scss";
+@import "../../styles/Variables.scss";
+@import "../../styles/Mixins.scss";
+
+.success-payment-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+
+    .payment-box {
+        height: 20vh;
+        align-items: center;
+        text-align: center;
+        border: 1px solid green;
+        border-radius: $border;
+        padding: 1rem;
+        margin: 3rem;
+        background-color: beige;
+        .payment-success-title{
+            margin: 1rem;
+        }
+    }
+}

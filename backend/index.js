@@ -20,6 +20,7 @@ import loginRoute from "./routes/loginRoute.js";
 import usersRoute from "./routes/usersRoute.js";
 import mealsRoute from "./routes/mealsRoute.js";
 import orderRoute from "./routes/orderRoute.js";
+import paymentRoute from "./routes/paymentRoute.js"
 import testimonialRoute from "./routes/testimonialRoute.js";
 import globalErrorHandler from "./middleware/globalErrorHandler.js"
 
@@ -57,6 +58,7 @@ app.use("/login", loginRoute);
 app.use("/users", usersRoute);
 app.use("/meals", mealsRoute);
 app.use("/oders", orderRoute);
+app.use("/payment", paymentRoute); 
 app.use("/contact/testimonials", upload.single("image"), testimonialRoute);
 
 // Express static used to access the the images in the assets folder
